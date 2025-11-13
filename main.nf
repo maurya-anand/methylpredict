@@ -5,7 +5,7 @@ nextflow.enable.dsl = 2
 workflow {
     input_samples = channel.fromPath(params.input_csv)
         .splitCsv(header: true)
-        .map { row -> tuple(row.sampleid, file(row.cram)) }
+        .map { row -> tuple(row.sampleid, file(row.cram), file(row.index)) }
 
     reference = file(params.reference)
     reference_fai = file(params.reference_fai)
@@ -46,7 +46,7 @@ workflow {
 process EXTRACT_REGION {
     publishDir "${params.outdir}/${sampleid}/alignment", mode: 'copy'
     input:
-    tuple val(sampleid), path(cram)
+    tuple val(sampleid), path(cram), path(cram_index)
     path reference
     path reference_fai
     path region_of_interest
