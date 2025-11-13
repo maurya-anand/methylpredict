@@ -147,10 +147,12 @@ outdir/
 
 ## Components
 
-- [**PEPPER-Margin-DeepVariant**](https://github.com/kishwarshafin/pepper)
-- [**NanoFreeLunch**](https://github.com/comprna/NanoFreeLunch.jl)
-- **Samtools/BCFtools**: BAM/VCF processing
-- **BEDtools**: Genomic interval operations
+| Component                                                            | Version        |
+| -------------------------------------------------------------------- | -------------- |
+| [bedtools](https://bedtools.readthedocs.io/)                         | 2.30.0         |
+| [NanoFreeLunch](https://github.com/comprna/NanoFreeLunch.jl)         | 0.28.0         |
+| [PEPPER-Margin-DeepVariant](https://github.com/kishwarshafin/pepper) | r0.8           |
+| [samtools](http://www.htslib.org/)                                   | 1.13           |
 
 ## Refrences
 
