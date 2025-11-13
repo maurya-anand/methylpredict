@@ -6,9 +6,9 @@ All notable changes to this project will be documented in this file.
 
 ### Release Notes
 
-- Initial release of the nf-ont-methpro pipeline for Oxford Nanopore methylation profiling.
+- Initial release of MethylPredict, a Nextflow pipeline for predicting DNA methylation from Oxford Nanopore sequencing data.
 - Implements modular Nextflow DSL2 workflow with sample-wise output organization.
 - Major features:
   - No methylation calls required - Works with standard ONT basecalled data containing base quality values (Guppy, Dorado).
-  - Variant-aware methylation calling - excludes CpG sites affected by variants.
+  - Variant-aware methylation prediction - excludes CpG sites affected by variants.
 - Supports execution with Docker, Singularity, Apptainer, and SLURM HPC environments.
