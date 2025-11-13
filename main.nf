@@ -87,7 +87,7 @@ process VARIANT_CALL {
     export PARALLEL_TMPDIR=\$TMPDIR
     mkdir -p \$TMPDIR
     run_pepper_margin_deepvariant call_variant \
-    -b ${sampleid}.aligned.sorted.bam \
+    -b ${bam} \
     -f ${reference} \
     -o . \
     --gvcf \
