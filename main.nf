@@ -27,8 +27,9 @@ workflow {
         reference_fai,
     )
     chromosomes = GET_CG_LOCI.out.locifile
+        .map { _sampleid, locifile -> locifile }
         .splitText()
-        .map { row -> row.split('\t')[0] }
+        .map { line -> line.split('\t')[0] }
         .unique()
     bam_loci_chr = VARIANT_CALL.out.bam
         .combine(GET_CG_LOCI.out.locifile)
